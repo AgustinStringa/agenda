@@ -1,0 +1,398 @@
+/*CUSTOM PROPERTIES*/
+
+:root {
+    --secundaryColor: #910b3c;
+    --mainColor: #b91751;
+    --darkMain: #ac0841;
+    --yellow: #fdb905;
+    --darkYellow: #fd9205;
+    --white: #e2e2e2;
+    --fuentePrimaria: 'Arial, Helvetica, sans-serif';
+    --fuenteSecundaria: 'Poppins', sans-serif;
+    --standar: all .3s ease;
+}
+
+
+/*GENERALES*/
+
+html {
+    box-sizing: border-box;
+    font-family: var(--fuenteSecundaria);
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+    /* font-family: var(--fuenteSecundaria); */
+}
+
+body {
+    background-color: var(--mainColor);
+}
+
+
+/*UTILIDADES*/
+
+.contenedor {
+    max-width: 1100px;
+    margin: 0 auto;
+    width: 90%;
+}
+
+.clearfix {
+    clear: both;
+    float: none;
+}
+
+.bg-amarillo {
+    background-color: var(--yellow);
+    padding: 1rem;
+}
+
+.bg-white {
+    background-color: #fff;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+.enviar {
+    background-color: var(--mainColor);
+}
+
+.sombra {
+    -webkit-box-shadow: 2px 3px 16px 0px rgba(0, 0, 0, 0.41);
+    -moz-box-shadow: 2px 3px 16px 0px rgba(0, 0, 0, 0.41);
+    box-shadow: 2px 3px 16px 0px rgba(0, 0, 0, 0.41);
+    border-radius: 1rem;
+}
+
+.btn {
+    font-size: 2rem;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all .3s esae;
+}
+
+.btnEditar {
+    color: var(--yellow);
+}
+
+.btnEditar:hover {
+    color: var(--darkYellow);
+}
+
+.btnBorrar {
+    color: var(--mainColor);
+    /**/
+    cursor: initial;
+}
+
+.btnBorrar:hover {
+    color: var(--darkMain);
+}
+
+.btnVolver {
+    background-color: var(--yellow);
+    padding: 1rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    width: 15%;
+    margin: 1rem 0;
+    z-index: 2;
+    color: white;
+    border-radius: 1rem;
+    transition: var(--standar);
+    text-align: center;
+}
+
+.btnVolver:hover {
+    background-color: var(--darkYellow);
+}
+
+
+/*ESTILOS PAGINA*/
+
+h1 {
+    color: white;
+    /* background-color: var(--secundaryColor); */
+    margin-top: 0;
+    padding: 1rem;
+    text-align: center;
+}
+
+form {
+    padding: 3rem;
+    /* margin-top: 2rem; */
+}
+
+legend {
+    font-family: var(--fuenteSecundaria);
+    font-size: 2rem;
+    margin: 0 auto;
+}
+
+legend span {
+    font-size: 1rem;
+    margin-top: 1rem;
+    /* clear: both; */
+    display: block;
+}
+
+
+/*campos*/
+
+.campos {
+    margin-top: 3rem;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+.campo {
+    flex-basis: calc((100% / 3) - 1rem);
+    margin: .5rem 0;
+}
+
+.campo input {
+    padding: 1rem;
+    display: block;
+    clear: both;
+    margin-top: 1rem;
+}
+
+.enviar {
+    /* flex-basis: 100%; */
+    margin-top: 1rem;
+    margin-right: 1.5rem;
+    background: transparent;
+    text-align: end;
+}
+
+.enviar input {
+    color: white;
+    background-color: var(--mainColor);
+    border-style: none;
+    padding: 1rem;
+    text-transform: uppercase;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all .3s ease;
+    display: initial;
+}
+
+.enviar input:hover {
+    background-color: var(--secundaryColor);
+}
+
+
+/*========================CONTACTOS================================*/
+
+.contenedor-barra {
+    background-color: var(--secundaryColor);
+}
+
+.contenedor-contactos {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.contenedor-contactos h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: var(--secundaryColor);
+    margin-top: 4rem;
+}
+
+.buscador {
+    display: block;
+    width: 100%;
+    padding: 1rem;
+    border-style: solid;
+}
+
+p.total-contactos {
+    font-size: 3rem;
+    color: var(--mainColor);
+    text-align: center;
+    margin-top: 4rem;
+}
+
+p.total-contactos span {
+    font-weight: 900;
+}
+
+.contenedor-tabla {
+    overflow: scroll;
+}
+
+.contenedor-contactos table {
+    border: 1px solid gray;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#listado-contactos thead {
+    background-color: var(--mainColor);
+}
+
+#listado-contactos thead th {
+    padding: 1rem 0;
+    color: white;
+    text-transform: uppercase;
+}
+
+#listado-contactos tbody td {
+    text-align: center;
+    padding: 1rem 0;
+    font-weight: bold;
+}
+
+#listado-contactos button {
+    background-color: transparent!important;
+    border: none!important;
+}
+
+#listado-contactos tbody td:nth-child(4) a i,
+#listado-contactos tbody td:nth-child(4) button i {
+    transition: var(--standar);
+    /**/
+    cursor: pointer;
+}
+
+#listado-contactos tbody td:nth-child(4) a i:hover {
+    animation-name: escalar;
+    animation-iteration-count: 1;
+    animation-timing-function: ease;
+    animation-duration: .5s;
+    animation-fill-mode: forwards;
+}
+
+#listado-contactos tbody td:nth-child(4) button i:hover {
+    animation-name: escalar;
+    animation-iteration-count: 1;
+    animation-timing-function: ease;
+    animation-duration: .5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes escalar {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.3);
+    }
+}
+
+
+/*===============================ESTILOS PARA EDITAR_CONTACTO.PHP=====================*/
+
+.barra {
+    display: grid;
+    align-items: center;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+    margin-bottom: 2rem;
+}
+
+.barra>a {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+}
+
+.barra>h1 {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    margin: 0;
+}
+
+
+/*===============================ESTILOS PARA MENSAJE DE VALIDACION hecho por mi=====================*/
+
+
+/*
+
+.mensaje-validacion {
+    position: relative;
+    margin: 1.5rem 0 0 0;
+    background: transparent;
+    padding: 1rem;
+    border-radius: 1rem;
+    border: 1px solid #b4312f;
+    background-color: #ecc8c5;
+    display: none;
+}
+
+.mensaje-validacion p {
+    text-transform: uppercase;
+    color: white;
+    color: #b4312f;
+    font-weight: bold;
+}
+
+.mensaje-validacion i {
+    float: left;
+    margin-right: 1rem;
+    font-size: 3rem;
+    text-transform: uppercase;
+    color: white;
+    color: #b4312f;
+    font-weight: bold;
+}
+*/
+
+
+/*===============================ESTILOS PARA MENSAJE DE VALIDACION=====================*/
+
+.notificacion {
+    position: fixed;
+    top: .5rem;
+    right: 1rem;
+    padding: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: var(--standar);
+    opacity: 0;
+    /**/
+    animation-name: entrada;
+    animation-timing-function: ease;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+}
+
+.visible {
+    opacity: 1;
+}
+
+@keyframes entrada {
+    from {
+        transform: translateX(100px);
+    }
+    to {
+        transform: translateX(0px);
+    }
+}
+
+.error {
+    border: 1px solid #d11e1b;
+    background-color: #e29d96;
+    color: #d11e1b;
+}
+
+.exito {
+    border: 1px solid #64d11b;
+    background-color: #a8e296;
+    color: #64d11b;
+}
+
+
+/*===============================ESTILOS PARA EL TR PLACEHOLDER=====================*/
+
+#tr-placeholder>td {
+    color: #444;
+    font-style: italic;
+    font-weight: 300!important;
+}
